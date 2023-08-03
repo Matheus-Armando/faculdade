@@ -1,0 +1,278 @@
+ALUNOS: Matheus Armando Piazza Chioquetta, Roger Jacobsen e Eduardo Minuzzi;
+
+/******************************************************************************
+Questão 1 
+*******************************************************************************/
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+int main(){
+    float num[1000], maiorAlt, menorAlt = 1000, media, menorQueMedia, soma, qtdeMenor;
+    
+    for (int i = 0; i < 1000; i++){
+        printf("Digite a altura informada:\n");
+        scanf("%f", &num[i]);
+    
+        
+    }
+    for (int i = 0; i < 1000; i++){
+        
+        soma +=  num[i];
+        printf("|%.2f|", num[i]);
+        if (num[i] > maiorAlt){
+            maiorAlt = num [i];
+        }
+        if (num[i] < menorAlt){
+        menorAlt = num[i];
+        }
+    }
+    
+    media = soma/1000;
+    
+    printf("\nA maior altura é:..%.2f", maiorAlt);
+    printf("\nA menor altura é:..%.2f", menorAlt);
+    printf("\nA média das alturas é:..%.2f", media);
+    
+    qtdeMenor = 0;
+    
+    printf("\nAs seguintes alturas são menores que a média:.....");
+    for (int i = 0; i < 1000; i++){
+        if (num[i] < media){
+        qtdeMenor++;
+        printf("|%.2f|", num[i]);
+    }
+    }
+    printf("\nNo total foram %.2f pessoas que tem a altura menor que a média", qtdeMenor);
+}
+
+/******************************************************************************
+Questão 2
+*******************************************************************************/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+
+int main() {
+    int decimal, binario = 0, fator = 1;
+
+    printf("Digite um numero decimal: ");
+    scanf("%d", &decimal);
+
+    while (decimal > 0) {
+        binario += (decimal % 2) * fator;
+        decimal /= 2;
+        fator *= 10;
+    }
+
+    printf("Decimal: %d\n", decimal);
+    printf("Binario: %d\n", binario);
+
+    return 0;
+}
+
+/******************************************************************************
+Questão 3
+*******************************************************************************/
+o for so irá mostrar até o quinto numero da array (14) sendo assim além de não gravar nenhum número na posição do número 20, ele se permanecerá 20.
+
+/******************************************************************************
+Questão 4
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int num, go;
+    
+    	while(go=1){ 
+       
+        printf("Digite um numero inteiro:");
+        scanf("%i", &num);     
+        
+        if(num%3 == 0 && num%5 == 0)
+        
+        printf("Seu numero é divisivel por 3 e 5");
+        
+        else
+        
+        printf("Seu numero não é divisivel por 3 e 5");
+
+	printf("\n\nDigite 1 para iniciar e 0 para sair:");
+       scanf("%i", &go);
+       
+       if(go == 0){
+           break;
+       }
+}
+}
+
+/******************************************************************************
+Questão 5
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int idade;
+
+    printf("Digite a idade de uma pessoa e saiba se essa pessoa pode ou não doar sangue: ");
+    scanf("%i", &idade);
+
+    if(idade >= 18 && idade <= 67) {
+        printf("\nEssa pessoa está apta a doar sangue.");
+    } else {
+        printf("\nEssa pessoa não está apta a doar sangue.");
+    }
+    return 0;
+}
+/******************************************************************************
+Questão 6
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int x, y, z;
+    
+    printf("Digite o numero de x e y consecutivamente:\n");
+    scanf("%i %i", &x, &y);
+    printf("x=%i e y=%i", x, y);
+    
+    z=x, x=y, y=z;
+    
+    printf("x = %i e y = %i", x, y);
+    
+}
+
+/******************************************************************************
+Questão 7
+*******************************************************************************/
+getche( ) lê um caracter do teclado, apresenta-o na tela e o devolve para a função chamadora.
+getch( ) parece com getche( ), exceto por não apresentar o caracter na tela.
+EXEMPLO:
+	int main()
+{
+char tecla;
+printf("pressione uma tecla: ");
+tecla = getchar();
+printf("Voce apertou a tecla: %c", tecla);
+}
+//foi usado o comando getchar pois o comando getche esta obsoleto
+	
+
+/******************************************************************************
+Questão 8
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int num [101];
+    
+    for(int i=0; i<101; i++){
+        num[i] = 0 + i;
+    
+    
+}
+
+    for(int i=0; i<101; i++){
+        if(num[i]%3 == 0)
+        
+        printf("[%i]",num[i]);
+}
+
+}
+/******************************************************************************
+Questão 9
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num, resultado, go;
+    
+    while(go=1){
+        
+       printf("\n\nDigite 1 para iniciar e 0 para sair:");
+       scanf("%i", &go);
+       
+       if(go == 0){
+           break;
+       }
+    
+    printf("Digite um numero entre 2 e 9:");
+    scanf("%i", &num);
+    
+    
+    for(int i=1; i<11; i++){
+        resultado = num*i;
+        
+        printf("\n %i x %i = %i", num, i, resultado);
+}
+}
+}
+        
+/******************************************************************************
+Questão 10
+*******************************************************************************/
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+int main()
+{
+    int k, resto, go, a, d, m;
+    
+    while(go= 1){
+
+    printf("Digite uma data no formato dd/mm/aaaa: ");
+   scanf("%d/%d/%d", &d, &m, &a);
+   printf("A data digitada foi: %02d/%02d/%04d\n", d, m, a);
+    
+     k = d + 2*m + (3*(m+1)/5) + a + a/4 - a/100 + a/400 + 2;
+    
+    resto = k % 7;
+    
+    if (resto == 1)
+    printf ("A data %02i/%02i/%04i será:.... Domingo\n", d, m, a);
+  else
+  if (resto == 2)
+    printf ("A data %02i/%02i/%04i será:.... Segunda\n", d, m, a);
+  else
+  if (resto == 3)
+    printf ("A data %02i/%02i/%04i será:.... Terça\n",d, m, a);
+  else
+  if (resto == 4)
+  printf ("A data %02i/%02i/%04i será:.... Quarta\n",d, m, a);
+  else
+  if (resto == 5)
+    printf ("A data %02i/%02i/%04i será:.... Quinta\n",d, m, a);
+  else
+  if (resto == 6)
+    printf ("A data %02i/%02i/%04i será:.... Sexta\n",d, m, a);
+  else
+  if (resto == 7)
+    printf ("A data %02i/%02i/%04i será:.... Sabado\n",d, m, a);
+  else
+    printf ("errouuuu\n");
+    
+     printf("\n\nDigite 1 para continuar e 0 para sair:");
+       scanf("%i", &go);
+       
+       if(go == 0){
+           break;
+       }
+       return 0;
+}
+}      
+

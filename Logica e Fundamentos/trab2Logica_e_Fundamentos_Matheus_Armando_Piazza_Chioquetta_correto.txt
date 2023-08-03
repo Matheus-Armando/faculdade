@@ -1,0 +1,378 @@
+Questão 1
+
+É correto o que se afirma em A) I, apenas.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 2
+
+TAM = 10
+
+vetor = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+i = 0
+while i < TAM:
+    if vetor[i] == 15:
+        resultado_funcao1 = i
+        break
+    i += 1
+else:
+    resultado_funcao1 = -1
+
+i = 0
+f = TAM - 1
+while i <= f:
+    m = (i + f) // 2
+    if vetor[m] == 15:
+        resultado_funcao2 = m
+        break
+    elif vetor[m] < 15:
+        i = m + 1
+    else:
+        f = m - 1
+else:
+    resultado_funcao2 = -1
+
+print(f"{resultado_funcao1} - {resultado_funcao2}")
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 3
+	LETRA A
+
+#include <stdio.h>
+
+#define LINHAS 3
+#define COLUNAS 5
+
+int main() {
+    int mat[LINHAS][COLUNAS] = {{1, 2, -1, 2, 3}, {1, -3, 4, 2, 0}, {-3, 5, 2, 3, 4}};
+    int x = 0;
+
+    for (int i = 0; i < LINHAS; i++) {
+        int sl = 0;
+        for (int j = 0; j < COLUNAS; j++) {
+            sl += mat[i][j];
+        }
+        x += sl;
+    }
+
+    printf("%d\n", x);
+
+    return 0;
+}
+
+	LETRA B
+
+mat = [[1, 2, -1, 2, 3], [1, -3, 4, 2, 0], [-3, 5, 2, 3, 4]]
+sl = [0, 0, 0]
+x = 0
+
+for i in range(len(mat)):
+    for j in range(len(mat[i])):
+        sl[i] += mat[i][j]
+    x += sl[i]
+0
+print(x)
+
+	LETRA C
+
+O valor apresentado no final será de 22.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 4
+
+while True:
+
+    n = float(input("Digite uma nota de 0 a 10\n"))
+
+    if  0 <= n <= 10:
+        break
+    else:
+        print("Nota inválida, digite a nota novamente")
+
+print("Sua nota é: ", n)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 5
+
+pop_A = 80000
+pop_B = 200000
+tA = 3
+tB = 1.5
+anos = 0
+
+while pop_A < pop_B:
+    popA = pop_A + (pop_A * (tA/100))
+    popB = pop_B + (pop_B * (tB/100))
+    anos += 1
+
+print("Número de anos necessários:", anos, "\nA população A será de: ", int(pop_A), "\nA população B será de: ", int(pop_B))
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 6
+
+numero = int(input("Digite um número entre 1 e 10 para gerar a tabuada: "))
+
+if 1 <= numero <= 10:
+    print("Tabuada de", numero, ":")
+
+    for i in range(1, 11):
+        resultado = numero * i
+        print(numero, "x", i, "=", resultado)
+else:
+    print("Número inválido. Digite um número entre 1 e 10.")
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 7
+
+salario_atual = float(input("Digite o salário atual: "))
+
+salario_atual = float(input("Digite o salário atual: "))
+
+if salario_atual <= 280.00:
+    percentual_aumento = 20
+elif salario_atual <= 700.00:
+    percentual_aumento = 15
+elif salario_atual <= 1500.00:
+    percentual_aumento = 10
+else:
+    percentual_aumento = 5
+
+aumento = salario_atual * percentual_aumento / 100
+novo_salario = salario_atual + aumento
+
+print("Salário antes do reajuste: R$", salario_atual)
+print("Percentual de aumento: ", percentual_aumento, "%")
+print("Valor do aumento: R$", aumento)
+print("Novo salário: R$", novo_salario)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 8
+
+lado1 = float(input("Digite o valor do primeiro lado do triângulo: "))
+lado2 = float(input("Digite o valor do segundo lado do triângulo: "))
+lado3 = float(input("Digite o valor do terceiro lado do triângulo: "))
+
+if lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1:
+    if lado1 == lado2 == lado3:
+        tipo_triangulo = "Equilátero"
+    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+        tipo_triangulo = "Isósceles"
+    else:
+        tipo_triangulo = "Escaleno"
+    
+    print("Os valores informados podem formar um triângulo", tipo_triangulo)
+else:
+    print("Os valores informados não podem formar um triângulo.")
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 9
+
+
+valor_hora = float(input("Digite o valor que você ganha por hora: "))
+horas_trabalhadas = float(input("Digite o número de horas trabalhadas no mês: "))
+
+salario_bruto = valor_hora * horas_trabalhadas
+imposto_renda = round(salario_bruto * 0.11, 2)
+inss = round(salario_bruto * 0.08, 2)
+sindicato = round(salario_bruto * 0.05, 2)
+
+salario_liquido = round(salario_bruto - imposto_renda - inss - sindicato, 2)
+
+print("Salário Bruto: R$", salario_bruto)
+print("Imposto de Renda (11%): R$", imposto_renda)
+print("INSS (8%): R$", inss)
+print("Sindicato (5%): R$", sindicato)
+print("Salário Líquido: R$", salario_liquido)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 10
+
+metroquadrado = float(input("Digite o tamanho da área a ser pintada em metros quadrados "))
+
+
+litros = metroquadrado / 3
+latas = litros/18
+latas = int(latas+1)
+valorfinal = latas * 80
+
+
+print("Serão gastos",litros, "litros de tinta")
+print("Será necessário",latas, "latas de tinta")
+print(f"Sendo cada lata R$80,00, o valor final da compra será R${valorfinal:.2f}")
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 11
+
+def reverso_numero():
+    numero = int(input("Digite um número inteiro: "))
+    numero_str = str(numero)
+    reverso_str = numero_str[::-1]
+    reverso = int(reverso_str)
+    return reverso
+
+reverso = reverso_numero()
+print(reverso)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 12
+
+import random
+
+def funcao_shuffle(words):
+    words = words.lower()
+    wordlist = list(words)
+    random.shuffle(wordlist)
+    shuffleword = ''.join(wordlist)
+
+    return shuffleword
+
+
+words = input("Digite qualquer coisa\n")
+shuffleword = funcao_shuffle(words)
+print(shuffleword)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 13 FINALIZAR
+
+# Solicitar o número de pontos ao usuário
+num_pontos = int(input("Digite o número de pontos: "))
+
+# Criar uma lista vazia para armazenar as coordenadas
+pontos = []
+
+# Solicitar as coordenadas de cada ponto ao usuário
+for i in range(num_pontos):
+    x = float(input(f"Digite a coordenada x do ponto {i+1}: "))
+    y = float(input(f"Digite a coordenada y do ponto {i+1}: "))
+    pontos.append((x, y))
+
+# Criar uma matriz vazia para armazenar as coordenadas
+matriz = []
+
+# Adicionar as coordenadas dos pontos à matriz
+for ponto in pontos:
+    x, y = ponto
+    matriz.append([x, y])
+
+# Imprimir a matriz
+for linha in matriz:
+    print(linha)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 14 
+
+import turtle
+
+distancias = [100, 150, 140, 110, 90, 100, 160, 120]
+tempos = [5, 8, 6.5, 4, 3.5, 4, 7.5, 6.5]
+
+screen = turtle.Screen()
+pen = turtle.Turtle()
+
+pen.penup()
+pen.goto(-200, -200)
+pen.pendown()
+
+fator_escala = 1 
+escala_x = 50
+
+pen.forward(len(distancias) * escala_x)
+pen.penup()
+pen.goto(-200, -200)
+pen.pendown()
+pen.setheading(90)
+pen.forward(len(tempos) * fator_escala)
+pen.penup()
+
+pen.goto(-200, -200)
+pen.pendown()
+pen.pencolor("black")
+pen.pensize(2)
+
+
+for i in range(len(distancias)):
+    x = i * escala_x
+    y = distancias[i] * fator_escala
+    pen.goto(-200 + x, -200 + y)
+    pen.dot(5)
+
+
+pen.hideturtle()
+
+turtle.done()
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 15
+
+n = int(input("Digite o número de linhas: "))
+
+for i in range(1, n+1):
+    for j in range(i):
+        print("*", end=" ")
+    print()
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 16
+pessoas = []
+
+for i in range(3):
+    nome = input("Digite o nome da pessoa: ")
+    altura = float(input("Digite a altura da pessoa: "))
+    idade = int(input("Digite a idade da pessoa: "))
+    
+    pessoa = {"Nome": nome, "Altura": altura, "Idade": idade}
+    pessoas.append(pessoa)
+
+print("Dados das pessoas:")
+for pessoa in pessoas:
+    print("Nome:", pessoa["Nome"])
+    print("Altura:", pessoa["Altura"])
+    print("Idade:", pessoa["Idade"])
+    print()
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 17
+pessoas = []
+
+for i in range(3):
+    nome = input("Digite o nome da pessoa: ")
+    altura = float(input("Digite a altura da pessoa: "))
+    idade = int(input("Digite a idade da pessoa: "))
+    
+    pessoa = {"Nome": nome, "Altura": altura, "Idade": idade}
+    pessoas.append(pessoa)
+
+print("Dados das pessoas:")
+for pessoa in pessoas:
+    print("Nome:", pessoa["Nome"])
+    print("Altura:", pessoa["Altura"])
+    print("Idade:", pessoa["Idade"])
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 18
+num = int(input('Digite um número: '))
+
+if num > 0:
+    print('Positivo')
+elif num == 0:
+    print('Nem positivo nem negativo, é 0')
+else:
+    print('Negativo')
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 19
+numeros_pares = 0
+numeros_impares = 0
+
+for i in range(10):
+    numero = int(input("Digite um número inteiro: "))
+    if numero % 2 == 0:
+        numeros_pares += 1
+    else:
+        numeros_impares += 1
+
+print("Quantidade de números pares:", numeros_pares)
+print("Quantidade de números ímpares:", numeros_impares)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Questão 20
+total_eleitores = int(input("Digite o número total de eleitores: "))
+
+candidato1_votos = 0
+candidato2_votos = 0
+candidato3_votos = 0
+
+for i in range(total_eleitores):
+    voto = int(input(f"Eleitor {i+1}, vote (1 para Candidato 1, 2 para Candidato 2, 3 para Candidato 3): "))
+    if voto == 1:
+        candidato1_votos += 1
+    elif voto == 2:
+        candidato2_votos += 1
+    elif voto == 3:
+        candidato3_votos += 1
+
+print("Resultado da eleição:")
+print("Candidato 1:", candidato1_votos, "votos")
+print("Candidato 2:", candidato2_votos, "votos")
+print("Candidato 3:", candidato3_votos, "votos")
