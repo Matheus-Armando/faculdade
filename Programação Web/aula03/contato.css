@@ -1,94 +1,70 @@
 header {
-    background: #CCCCCC;
-    padding: 20px 0px;
-   
+  background: #CCCCCC;
+  padding: 20px 0px;
+ 
 }
 
 .caixa {
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
 }
 
 nav {
-    position: absolute;
-    top: 110px;
-    right: 30px;
+  position: absolute;
+  top: 110px;
+  right: 30px;
 }
 
 nav li {
-    display: inline;
-    margin: 0 20px 0 15px;
+  display: inline;
+  margin: 0 20px 0 15px;
 }
 
 nav a {
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
 }
-/*
-body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-  }
-  */
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea,
-  select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  p {
-    font-weight: bold;
-  }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-right: 5px;
-    display: inline-flex;
-  }
-  
-  input[type="submit"] {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #555;
-  }
-  
+
+.formulario {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rotulo {
+display: block;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.campo {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.subtitulo {
+font-weight: bold;
+}
+
+.botao {
+background-color: #333;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.botao:hover {
+background-color: #555;
+}
