@@ -2,7 +2,7 @@ body{
     background-color: rgb(34, 34, 34);
     color: whitesmoke;
     margin: 0 auto;
-    max-width: 1200;
+    max-width: 1500px;
     padding: 15px;
 }
 
@@ -10,24 +10,135 @@ header{
     flex-direction: row;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 50px;
-}
-
-.pad {
-    width: 450px;
-    height:300px;
+    align-items:center;
+    column-gap: 100px;
 }
 
 .titulo{
-    
-    column-gap: 10px;
+    font-family: 'Hack-Bold';
+    width: 500px;
+   padding-right: 100px ; 
 }
 
 .titulo h1 {
-    margin: 0; /* Remove margens padrão do h1 */
+    margin-left: calc(100px - 10px); /* Metade do espaçamento */
     font-size: 50px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-family: 'Hack-Bold';
+    color: rgb(87, 71, 2);
+    -webkit-text-stroke: 0.5px white; /* Largura e cor da borda */
     
   }
+
+  .article{
+    width: 500px;
+  }
+
+  .article img {
+    max-width: 350px; /* Defina o tamanho máximo da logo */
+    border: 50px;
+    border-color: rgb(87, 71, 2);
+       
+  }
+  .headerLink{
+    width: 500px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+   
+  }
+  .headerLink li{
+    flex-direction: row;
+    margin-right: 20px;
+    border: 2px solid rgb(87, 71, 2);
+    padding: 5px;
+    border-radius: 15%;
+  }
+
+  .headerLink li:last-child {
+    margin-right: 0;
+  }
+
+  .headerLink li:hover {
+    background-color: rgb(87, 71, 2); /* Altere a cor de fundo no hover */
+    transition: 0,3ms;
+  }
+
+  .headerLink li:hover a {
+    color: white; /* Altere a cor do texto no hover */
+  }
+
+  .headerLink li a {
+    text-decoration: none;
+    color: white; /* Defina a cor dos links desejada */
+    font-weight: 'Hack-Regular';
+    font-size: 20px;
+    transition: 3ms;
+  }
+
+.main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.main aside{
+    width: 750px;
+    padding-right: 100px;
+}
+
+.main aside h2{
+  font-family: 'Letterland';
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  padding-left: 120px;
+}
+
+.h2teste{
+  margin-left: 100px;
+}
+
+.main aside p{
+  font-family: 'Hack-Regular';
+}
+.main article{
+   width: 750px;
+   margin-top: 50px;
+   margin-bottom: 10px;
+   align-items: center;
+   padding-left: 100px;
+}
+
+.imagemHistoria {
+    position: relative;
+    
+
+    
+}
+
+.legenda {
+    width: 100%;
+    color: white; /* Cor do texto da legenda */
+    -webkit-text-stroke: 0.8px rgb(87, 71, 2);
+    padding: 3px; /* Espaçamento interno da legenda */
+   margin-left: 170px;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#entradaNova{
+    width: 1500px;
+    height: 900px;
+}
+
+.pad {
+    width: 550px;
+    height:350px;
+    border: 2px;
+    border-color: rgb(87, 71, 2);
+}
+
+.h2entrada{
+  font-family: 'Hack-BoldItalic';
+  margin-left: 270px;
+}

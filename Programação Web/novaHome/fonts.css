@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Letterland';
+    src: url('fonts/Letterland.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Blacksword';
+    src: url('fonts/Blacksword.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Hack-Bold';
+    src: url('fonts/Hack-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Hack-BoldItalic';
+    src: url('fonts/Hack-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Hack-Italic';
+    src: url('fonts/Hack-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Hack-Regular';
+    src: url('fonts/Hack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
