@@ -3,7 +3,8 @@ body{
     color: whitesmoke;
     margin: 0 auto;
     max-width: 1500px;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
+    
 }
 
 header{
@@ -13,7 +14,6 @@ header{
     align-items:center;
     column-gap: 100px;
 }
-
 .titulo{
     font-family: 'Hack-Bold';
     width: 500px;
@@ -109,10 +109,7 @@ header{
 }
 
 .imagemHistoria {
-    position: relative;
-    
-
-    
+    position: relative; 
 }
 
 .legenda {
@@ -140,5 +137,35 @@ header{
 
 .h2entrada{
   font-family: 'Hack-BoldItalic';
-  margin-left: 270px;
+  display: flex;
+  justify-content: center;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer{
+  background-color:rgb(87, 71, 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer p {
+  font-family: 'Hack-BoldItalic';
+  margin-right: 20px;
+  -webkit-text-stroke: 0.5px rgb(2, 2, 2); /* Largura e cor da borda */
+}
+
+.footer a {
+  font-family: 'Hack-BoldItalic';
+  color: rgb(255, 255, 255);
+  display: block; /* Mudar para bloco para que os links fiquem em coluna */
+  text-decoration: none;
+  margin-bottom: 10px; /* Espaçamento entre os links */
 }
