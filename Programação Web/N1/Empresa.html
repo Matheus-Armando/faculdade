@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="home.css" media="screen" />
+
+    <title>Empresa</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Automotivo</h1>
+            <h1>The Fez</h1>
+        </div>
+        <article class="article">
+            <img src="img/logo.png">
+        </article>
+        <ul class="headerLink">
+            <li><a href="home.html">Homepage</a></li>
+            <li><a href="Cliente.html">Cliente</a></li>
+            <li><a href="Funcionario.html">Funcionario</a></li>
+            <li><a href="Carros.html">Carros</a></li>
+            <li><a href="Maisvendidos.html">Mais Vendidos</a></li>
+        </ul>
+    </header>
+
+    <h1 class="titulo">Cadastro de Empresa</h1>
+    <form class="formulario" action="processar.php" method="post">
+        <label class="rotulo" for="nome">Razão Social:</label>
+        <input class="campo" type="text" id="nome" name="nome" required><br>
+
+        <label class="rotulo" for="telefone">Telefone:</label>
+        <input class="campo" type="text" id="telefone" name="telefone" required><br>
+
+        <label class="rotulo" for="cnpj">CNPJ:</label>
+        <input class="campo" type="text" id="cnpj" name="cnpj" required><br>
+
+        <label class="rotulo" for="inscricaoEstadual">Inscrição Estadual:</label>
+        <input class="campo" type="text" id="inscricaoEstadual" name="inscricaoEstadual" required><br>
+
+        <label class="rotulo" for="regime">Regime Tributário:</label>
+        <select class="campo" id="regime" name="regime">
+            <option value="normal">Normal</option>
+            <option value="simples">Simples Nacional</option>
+            <option value="simplescomsb">Simples com substituição</option>
+        </select><br>   
+
+        <label class="rotulo" for="observacao">Observação:</label>
+        <textarea class="campo" id="observacao" name="observacao" required></textarea><br>
+
+        <label class="rotulo"><input type="checkbox" name="inativo">Inativo</label><br>
+
+        <input class="botao" type="submit" value="Salvar">
+</body>
+
+</html>

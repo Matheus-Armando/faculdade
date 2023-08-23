@@ -124,8 +124,10 @@ header{
 }
 
 #entradaNova{
-    width: 1500px;
+    width: 1400px;
     height: 900px;
+    display: flex;
+    justify-content: center;
 }
 
 .pad {

@@ -1,0 +1,81 @@
+header {
+    background: #CCCCCC;
+    padding: 20px 0px;
+   
+}
+
+.caixa {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 30px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.inline-list {
+    list-style-type: none;
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inline-list li {
+    text-align: center; 
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid #c09265; /* Adiciona uma borda */
+    background-color: #f9f9f9; /* Adiciona um fundo cinza claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0.6, 0.9); /* Adiciona uma sombra sutil */
+    flex-basis: calc(33.33% - 20px); /* Divide igualmente em 3 colunas, considerando o espaçamento */
+    height: 400px;
+    width: 400px;
+  }
+
+  .imagensProdutos {
+    display: block;
+    margin: 0 auto; 
+    width: 250px;
+    height: 250px;
+  }
+
+  .descricaoProduto {
+    margin-top: 10px;
+  }
+
+  
+.tituloProduto{
+    color: #8E236B;
+    font-weight: bold;
+    font-size: 24px;
+    text-align:inherit;
+}
+
+.div{
+    background-color: #CCCCCC;
+    text-align: center;
+}
+
+/*.imagensProdutos{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+} */
