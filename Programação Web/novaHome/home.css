@@ -60,7 +60,7 @@ header{
 
   .headerLink li:hover {
     background-color: rgb(87, 71, 2); /* Altere a cor de fundo no hover */
-    transition: 0,3ms;
+    transition: background-color 1s ease;
   }
 
   .headerLink li:hover a {

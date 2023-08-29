@@ -5,3 +5,55 @@
     align-items:center;
     column-gap: 100px;
 }
+
+body{
+    font-family: 'Bebas';
+}
+
+.titulo2{
+    font-size: 50px;
+    justify-content: center;
+    display: flex;
+}
+
+.formulario {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rotulo {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.campo {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: rgb(240, 230, 230);
+}
+
+.subtitulo {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.botao {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor:grabbing;
+    border-radius: 3px;
+    font-family: 'Bebas';
+}
+
+.botao:hover {
+    background-color: #555;
+}

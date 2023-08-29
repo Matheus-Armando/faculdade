@@ -5,4 +5,26 @@
     align-items:center;
     column-gap: 100px;
 }
+body{
+    font-family: 'Bebas';
+}
+.top3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
 
+.lista{
+    flex-direction: row;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lista li{
+    padding: 10px;
+}
