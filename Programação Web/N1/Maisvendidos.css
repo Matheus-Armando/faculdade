@@ -6,3 +6,17 @@
     column-gap: 100px;
 }
 
+.imgcar{
+    width: 350px;
+    height: 200px;
+}
+
+.top3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista{
+    flex-direction: row;
+}
