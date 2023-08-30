@@ -7,7 +7,7 @@
     font-family: 'Bebas';
 }
 
-.articlelogo{
+.article{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,11 +56,6 @@
   .headerLink li:hover a {
     color: rgb(156, 39, 39); /* Altere a cor do texto no hover */
   }
-
-.imgcar{
-    width: 350px;
-    height: 200px;
-}
 
 body{
     font-family: 'Bebas';
