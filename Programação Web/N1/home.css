@@ -80,3 +80,15 @@
     margin-bottom: 10px; /* Espaçamento entre os links */
     padding-right: 40px;
   }
+
+  .sobreNos{
+    font-family: 'Bebas';
+    font-size: 28px;
+  }
+  .destaque {
+    font-weight: bold;
+    font-size: 1.2em; 
+}
+.sobreNos p {
+  margin: 0.01em 0;
+}

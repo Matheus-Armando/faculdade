@@ -4,6 +4,62 @@
     justify-content: space-between;
     align-items:center;
     column-gap: 100px;
+    font-family: 'Bebas';
+}
+
+.articlelogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+.titulo{
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo h1{
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+.headerLink{
+  font-size: 20px;
+  padding-right: 100px;
+}
+
+.headerLink li{
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #333;
+    border-radius: 10%;
+    justify-content: center;
+    display: flex;
+
+}
+.headerLink li a{
+    border: 50px;
+}
+
+.headerLink li:hover {
+    background-color: rgb(97, 81, 215); /* Altere a cor de fundo no hover */
+    transition: background-color 1s ease;
+  }
+
+  .headerLink li:hover a {
+    color: rgb(156, 39, 39); /* Altere a cor do texto no hover */
+  }
+
+.imgcar{
+    width: 350px;
+    height: 200px;
 }
 
 body{
@@ -57,3 +113,27 @@ body{
 .botao:hover {
     background-color: #555;
 }
+
+.footer{
+    background-color: rgb(97, 81, 215);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .footer p {
+    font-family: 'Bebas';
+    margin-right: 20px;
+    -webkit-text-stroke: 0.5px rgb(5, 5, 5); /* Largura e cor da borda */
+    justify-content: space-between;
+  }
+  
+  .footer a {
+    font-family: 'Bebas';
+    color: rgb(156, 39, 39);
+    display: block; /* Mudar para bloco para que os links fiquem em coluna */
+    text-decoration: none;
+    margin-bottom: 10px; /* Espaçamento entre os links */
+    padding-right: 40px;
+  }
