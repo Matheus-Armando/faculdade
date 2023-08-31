@@ -115,6 +115,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    margin-top: 10px;
   }
   
   .footer p {
@@ -131,4 +132,5 @@ body{
     text-decoration: none;
     margin-bottom: 10px; /* Espaçamento entre os links */
     padding-right: 40px;
+    font-size: 20px;
   }

@@ -66,6 +66,7 @@ padding-right: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Bebas';
 }
 
 .lista{
@@ -94,4 +95,17 @@ padding-right: 100px;
     text-decoration: none;
     margin-bottom: 10px; /* Espaçamento entre os links */
     padding-right: 40px;
+    font-size: 20px;
+  }
+
+  h2{
+    font-family: 'Bebas';
+  }
+
+  h1{
+    font-family: 'Bebas';
+  }
+
+  .h2{
+    margin-left: 40px;
   }

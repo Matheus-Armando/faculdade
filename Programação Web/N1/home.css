@@ -78,17 +78,90 @@
     display: block; /* Mudar para bloco para que os links fiquem em coluna */
     text-decoration: none;
     margin-bottom: 10px; /* Espaçamento entre os links */
-    padding-right: 40px;
+    padding-right: 10px;
+    font-size: 20px;
   }
 
-  .sobreNos{
-    font-family: 'Bebas';
-    font-size: 28px;
-  }
-  .destaque {
-    font-weight: bold;
-    font-size: 1.2em; 
+  .main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
 }
-.sobreNos p {
-  margin: 0.01em 0;
+.main aside{
+    width: 750px;
+    padding-right: 100px;
+}
+
+.main aside h2{
+  font-family: 'Bebas';
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  padding-left: 120px;
+}
+
+.h2teste{
+  margin-left: 100px;
+}
+
+.main aside p{
+  font-family: 'Hack-Regular';
+}
+.main article{
+   width: 750px;
+   margin-top: 50px;
+   margin-bottom: 10px;
+   align-items: center;
+   padding-left: 100px;
+   justify-content: center;
+}
+
+.imagemHistoria {
+    position: relative; 
+}
+
+.legenda {
+    width: 100%;
+    color: white; /* Cor do texto da legenda */
+    -webkit-text-stroke: 0.8px rgb(87, 71, 2);
+    padding: 3px; /* Espaçamento interno da legenda */
+   margin-left: 180px;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Bebas';
+}
+
+#entradaNova{
+    width: 1400px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.pad {
+    width: 550px;
+    height:350px;
+    border: 2px;
+    border-color: rgb(87, 71, 2);
+    padding: 25px ;
+}
+
+.h2entrada{
+  font-family: 'Bebas';
+  display: flex;
+  justify-content: center;
+}
+
+.media{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.yt{
+  width: 500px;
+  height: 300px;
 }

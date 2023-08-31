@@ -64,6 +64,8 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .lista{
@@ -78,6 +80,7 @@ body{
 
 .lista li{
     padding: 10px;
+    font-size: 25px;
 }
 
 .footer{
@@ -102,4 +105,9 @@ body{
     text-decoration: none;
     margin-bottom: 10px; /* Espaçamento entre os links */
     padding-right: 40px;
+    font-size: 20px;
+  }
+
+  .h1{
+    font-size: 50px;
   }
