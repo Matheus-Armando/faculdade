@@ -1,4 +1,52 @@
-/*.header{
+
+.imgcar{
+  width: 350px;
+  height: 200px;
+}
+
+.top3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bebas';
+}
+
+.lista{
+  flex-direction: row;
+}
+.ul {
+  
+  background-color: #f5f5f5; 
+  border: 1px solid #ddd; 
+  padding: 20px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-family: 'Bebas';
+  font-size: 16px; 
+  line-height: 1.4; 
+}
+
+
+.ul li {
+  font-family: 'Bebas';
+  list-style: none;
+  padding: 10px; 
+  margin-bottom: 10px; 
+  color: #333; 
+}
+
+.imgcar {
+  border: 1px solid #ddd; 
+  max-width: 100%; 
+}
+
+.titleFamily{
+  font-family: 'Bebas';
+}
+
+
+
+.header{
   flex-direction: row;
   display: flex;
   justify-content: space-between;
@@ -49,175 +97,10 @@ padding-right: 100px;
 }
 
 .headerLink li:hover {
-  background-color: rgb(97, 81, 215); /* Altere a cor de fundo no hover *
+  background-color: rgb(97, 81, 215); /* Altere a cor de fundo no hover */
   transition: background-color 1s ease;
 }
 
 .headerLink li:hover a {
-  color: rgb(156, 39, 39); /* Altere a cor do texto no hover *
+  color: rgb(156, 39, 39); /* Altere a cor do texto no hover */
 }
-
-.imgcar{
-    width: 350px;
-    height: 200px;
-}
-
-.top3{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Bebas';
-}
-
-.lista{
-    flex-direction: row;
-}
-
-.footer{
-    background-color: rgb(97, 81, 215);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .footer p {
-    font-family: 'Bebas';
-    margin-right: 20px;
-    -webkit-text-stroke: 0.5px rgb(5, 5, 5); /* Largura e cor da borda *
-    justify-content: space-between;
-  }
-  
-  .footer a {
-    font-family: 'Bebas';
-    color: rgb(156, 39, 39);
-    display: block; /* Mudar para bloco para que os links fiquem em coluna *
-    text-decoration: none;
-    margin-bottom: 10px; /* Espaçamento entre os links *
-    padding-right: 40px;
-    font-size: 20px;
-  }
-
-  h2{
-    font-family: 'Bebas';
-  }
-
-  h1{
-    font-family: 'Bebas';
-  }
-
-  .h2{
-    margin-left: 40px;
-  }
-*/
-
-.nav ul {
-  list-style: none;
-  
-  margin: 0;
-}
-
-.nav li {
-  display: inline;
-  margin-right: 15x; /* Add spacing between navigation items */
-}
-
-.nav a {
-  text-decoration: none;
-  
-  font-weight: bold; /* Optional: Make the text bold */
-}
-
-.nav a:hover {
-  text-decoration: underline; /* Optional: Add underline on hover */
-}
-
-.imgcar{
-  width: 350px;
-  height: 200px;
-}
-
-.top3{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.lista{
-  flex-direction: row;
-}
-.ul {
-  
-  background-color: #f5f5f5; 
-  border: 1px solid #ddd; 
-  padding: 20px; 
-  margin-bottom: 20px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  font-family: 'Bebas';
-  font-size: 16px; 
-  line-height: 1.4; 
-}
-
-
-.ul li {
-  font-family: 'Bebas';
-  list-style: none;
-  padding: 10px; 
-  margin-bottom: 10px; 
-  color: #333; 
-}
-
-.imgcar {
-  border: 1px solid #ddd; 
-  max-width: 100%; 
-}
-
-.titleFamily{
-  font-family: 'Bebas';
-}
-
-.logo{
-  width: 50%;
-  height: 50%;
-}
-
-.header{
-  flex-direction: row;
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  column-gap: 100px;
-  font-family: 'Bebas';
-}
-.headerLink{
-  font-size: 20px;
-  padding-right: 100px;
-  }
-  
-  .headerLink li{
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid #333;
-    border-radius: 10%;
-    justify-content: center;
-    display: flex;
-  
-  }
-  .headerLink li a{
-    border: 50px;
-  }
-  
-  .headerLink li:hover {
-    background-color: rgb(97, 81, 215); /* Altere a cor de fundo no hover */
-    transition: background-color 1s ease;
-  }
-  
-  .headerLink li:hover a {
-    color: rgb(156, 39, 39); /* Altere a cor do texto no hover */
-  }
-
-  .articlelogo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
