@@ -67,22 +67,45 @@ function atualizarResultado() {
   document.getElementById('resultado').value = valorAtual;
 }
 
-document.addEventListener('keydown', function(event) {
+// document.addEventListener('keydown', function(event) {
+//     const teclaPressionada = event.key;
+//     const teclaCode = event.code;
+  
+//     if (/[0-9+\-*/.=]|Enter/.test(teclaPressionada)) {
+//       if (teclaPressionada === '.') {
+//         adicionarDecimal(teclaPressionada);
+//       } else if (teclaPressionada === '=' || teclaPressionada === 'Enter') {
+//         calcular();
+//       } else if (/[+\-*/]/.test(teclaPressionada)) {
+//         adicionarOperador(teclaPressionada);
+//       } else if (teclaCode === 'C' || teclaCode === 'c') {
+//         limpar();
+//       } else {
+//         adicionarNumero(teclaPressionada);
+//       }
+//     }
+//   });
+
+  document.addEventListener('keydown', function(event) {
     const teclaPressionada = event.key;
     const teclaCode = event.code;
   
-    if (/[0-9+\-*/.=]|Enter/.test(teclaPressionada)) {
-      if (teclaPressionada === '.') {
-        adicionarDecimal(teclaPressionada);
-      } else if (teclaPressionada === '=' || teclaPressionada === 'Enter') {
-        calcular();
-      } else if (/[+\-*/]/.test(teclaPressionada)) {
-        adicionarOperador(teclaPressionada);
-      } else if (teclaCode === 'KeyC' || teclaCode === 'Keyc') {
-        limpar();
-      } else {
-        adicionarNumero(teclaPressionada);
-      }
-    }
+   switch(teclaPressionada){
+    case '.' : adicionarDecimal(teclaPressionada)
+      break;
+    case '=' : 
+    case'Enter': calcular();
+      break;
+    case 'c' :
+    case 'C' : limpar();
+      break;
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+      adicionarOperador(teclaPressionada)
+      break;
+    default : adicionarNumero(teclaPressionada);
+   } 
   });
  
