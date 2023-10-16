@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment> HELLO! </comment>
+
+    <entry key="sql.genero.buscarTodas">
+    	select * from genero
+     </entry>
+     <entry key="sql.genero.inserir">
+    	insert into genero (nome) values (?)
+     </entry>
+       <entry key="sql.genero.alterar">
+    	update genero set nome = ? where idgenero = ?
+     </entry>
+     <entry key="sql.genero.excluir">
+    	delete genero where idgenero = ?
+     </entry>
+     <entry key="sql.genero.buscaPorCodigo">
+    	select * from genero where idgenero = ?
+     </entry>
+         <entry key="sql.genero.buscaPorNome">
+    	select * from genero where nome like ?
+     </entry>
+    
+    
+    
+</properties>

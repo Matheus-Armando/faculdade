@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment> HELLO! </comment>
+
+      <entry key="sql.autor.buscarTodas">
+    	select * from autor
+     </entry>
+     <entry key="sql.autor.inserir">
+    	insert into autor (nome, biografia) values (?, ?)
+     </entry>
+       <entry key="sql.autor.alterar">
+    	update autor set nome = ?, biografia = ? where idautor = ?
+     </entry>
+     <entry key="sql.autor.excluir">
+    	delete autor where idautor = ?
+     </entry>
+     <entry key="sql.autor.buscaPorCodigo">
+    	select * from autor where idautor = ?
+     </entry>
+         <entry key="sql.autor.buscaPorNome">
+    	select * from autor where nome like ?
+     </entry>
+    
+</properties>
