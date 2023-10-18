@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment> HELLO! </comment>
+
+	<entry key="sql.musica.buscarTodas">
+		select * from musica
+	</entry>
+	<entry key="sql.musica.inserir">
+		insert into musica (nome, idautor, duracaoMinutos, idgenero) values (?, ?, ?, ?)
+	</entry>
+	<entry key="sql.musica.alterar">
+		update musica set nome = ?, idautor = ?, duracaoMinutos = ? where idmusica =
+		?
+	</entry>
+	<entry key="sql.musica.excluir">
+		delete musica where idmusica = ?
+	</entry>
+	<entry key="sql.musica.buscaPorCodigo">
+		select * from musica where idmusica = ?
+	</entry>
+	<entry key="sql.musica.buscaPorNome">
+		select * from musica where nome like ?
+	</entry>
+	<entry key="sql.musica.buscaPorGenero">
+		select * from musica where idgenero = ?
+	</entry>
+
+
+</properties>
