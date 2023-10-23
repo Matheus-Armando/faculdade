@@ -1,0 +1,58 @@
+/* styles.css */
+
+/* Estilize o cabeçalho h1 */
+h1 {
+    color: #007bff;
+    text-align: center;
+}
+
+/* Estilize o formulário */
+#autorForm {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#autorForm label {
+    display: block;
+    font-weight: bold;
+}
+
+#autorForm input[type="text"],
+#autorForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+#autorForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Estilize a tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilize os botões de ação */
+button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Front-end para API de Autores</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Front-end para API de Autores</h1>
+
+    <!-- Formulário para inserir um novo autor -->
+    <div id="autorForm">
+        <label for="nome">Nome do Autor:</label>
+        <input type="text" id="nome" name="nome">
+        <label for="biografia">Biografia:</label>
+        <textarea id="biografia" name="biografia"></textarea>
+        <button type="submit">Inserir</button>
+    </div>
+
+    <!-- Tabela para listar autores -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Biografia</th>
+            </tr>
+        </thead>
+        <tbody id="autoresTable">
+            <!-- Os autores serão listados aqui -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
