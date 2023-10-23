@@ -34,14 +34,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     <td>${autor.nome}</td>
                     <td>${autor.biografia}</td>
                     <td>
-                        <button onclick="excluirAutor(${autor.id})">Excluir</button>
+                        <button class="excluir-button" data-id="${autor.id}">Excluir</button>
                     </td>
                 `;
                 autoresTable.appendChild(row);
             });
+
+            // Adicionar ouvintes de evento para os botões de exclusão
+            const excluirButtons = document.querySelectorAll('.excluir-button');
+            excluirButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = button.getAttribute('data-id');
+                    excluirAutor(id);
+                });
+            });
         })
         .catch(error => console.error(error));
-    }    
+    }
 
     function excluirAutor(id) {
         fetch(`http://localhost:1433/musicologia/autor/${id}`, {
