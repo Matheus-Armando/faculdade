@@ -1,12 +1,10 @@
-/* styles.css */
 
-/* Estilize o cabeçalho h1 */
 h1 {
     color: #007bff;
     text-align: center;
 }
 
-/* Estilize o formulário */
+
 #autorForm {
     margin: 20px 0;
     text-align: center;
@@ -32,7 +30,7 @@ h1 {
     cursor: pointer;
 }
 
-/* Estilize a tabela */
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -48,7 +46,7 @@ th, td {
     text-align: left;
 }
 
-/* Estilize os botões de ação */
+
 button {
     background-color: #dc3545;
     color: #fff;
@@ -56,3 +54,61 @@ button {
     padding: 5px 10px;
     cursor: pointer;
 }
+
+.field{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.field button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+   
+}
+
+#idPesquisado{
+    margin-bottom: 10px;
+}
+
+.headerLink{
+    font-size: 20px;
+    padding-right: 100px;
+  }
+  
+  .headerLink li{
+      padding: 5px;
+      margin: 5px;
+      border: 1px solid #333;
+      border-radius: 10%;
+      justify-content: center;
+      display: flex;
+  
+  }
+  .headerLink li a{
+      border: 50px;
+  }
+  
+  .headerLink li:hover {
+      background-color: #007bff; /* Altere a cor de fundo no hover */
+      transition: background-color 1s ease;
+    }
+  
+    .headerLink li:hover a {
+      color: rgb(7, 7, 7); /* Altere a cor do texto no hover */
+    }
+
+    .header{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        column-gap: 100px;
+    }

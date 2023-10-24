@@ -1,24 +1,32 @@
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="script.js" lang="Javascript"></script>
     </head>
+    <header class="header">
+        <div class="titulo">
+            <h1>Alteração do Cadastro de Autores</h1>
+        </div>
+        <ul class="headerLink">
+            <li><a href="autor-busca-id.html">Buscar por ID</a></li>
+            <li><a href="home.html">Homepage</a></li>
+        </ul>
+    </header>
     <body onload = "getParametros()">
-        <div class="alterar">
+        <div id="autorForm">
 
             <form id="form">
-                <h1>Alteração de Forma de Pagamento</h1>
                 <div class="field">
                     <label>Código:</lable> <input type="text" id="idAutor" name="idAutor" disabled/> <br/> 
                 </div>
-                <div class="field"></div>
+                <div class="field">
                     <label>Nome:</lable> <input type="text" id="nome" name="nome"/> <br/> 
                 </div>
-				
 				<div class="field"></div>
                     <label>Biografia:</lable> <input type="text" id="biografia" name="nome"/> <br/> 
                 </div>
 				
-                <div class="div-btn">
+                <div class="field">
                     <button type="button"  onclick="alterarNoBanco();">Alterar</button>
                 </div>
              
