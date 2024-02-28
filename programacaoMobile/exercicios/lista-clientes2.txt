@@ -1,0 +1,27 @@
+***************************
+**** LISTA DE CLIENTES ****
+***************************
+Nome: eu
+Idade: 25
+Cidade: pb
+Estado: pr
+Total de pessoas cadastradas: 4
+***************************
+***************************
+**** LISTA DE CLIENTES ****
+***************************
+Nome: roger
+Idade: 24
+Cidade: pb
+Estado: pr
+Total de pessoas cadastradas: 4
+***************************
+***************************
+**** LISTA DE CLIENTES ****
+***************************
+Nome: maccari
+Idade: 57
+Cidade: slo
+Estado: sc
+Total de pessoas cadastradas: 4
+***************************
