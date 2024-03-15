@@ -1,3 +1,5 @@
+import 'package:t1/cliente.dart';
+
 import 'produto.dart';
 import 'dart:io';
 
@@ -6,8 +8,10 @@ class Venda {
   List<Produto> _produtosVendidos = [];
   double valorTotal;
   double desconto;
+  String nomeCliente;
 
-  Venda(this.id,this._produtosVendidos, this.valorTotal, this.desconto);
+  Venda(this.id, this._produtosVendidos, this.valorTotal, this.desconto,
+      this.nomeCliente);
 
   List<Produto> get produtosVendidos => _produtosVendidos;
 
@@ -19,31 +23,18 @@ class Venda {
 
 class RealizaVenda {
   CadastroProdutos cadastroProduto;
-
-  RealizaVenda(this.cadastroProduto);
+  CadastroClientes cadastroCliente;
+  RealizaVenda(this.cadastroProduto, this.cadastroCliente);
 
   final List<Venda> _vendas = [];
 
   List<Venda> get vendas => _vendas;
 
-  // void venderProduto(String nomeProduto, double qtdeVendida) {
-  //   var produto = cadastroProduto.buscar(nomeProduto);
-  //   if (produto != null) {
-  //     print('Produto encontrado: $produto');
-  //     if (produto.qtde >= qtdeVendida) {
-  //       produto.alterarQuantidade(produto.qtde - qtdeVendida);
-  //     } else {
-  //       print('Quantidade insuficiente');
-  //     }
-  //   } else {
-  //     print('Produto não encontrado');
-  //   }
-  // }
-
   validaQuantidade(String nomeProduto, double qtdeVendida) {
     var produto = cadastroProduto.buscar(nomeProduto);
     if (produto != null) {
       if (produto.qtde >= qtdeVendida) {
+        produto.alterarQuantidade(produto.qtde - qtdeVendida);
         return true;
       } else {
         print('Quantidade insuficiente');
@@ -57,9 +48,35 @@ class RealizaVenda {
   void realizaVenda() {
     String continuar = 's';
     double valorFinal = 0;
-      List<Produto> produtosVenda = [];
+    List<Produto> produtosVenda = [];
     var valida = true;
+    var validaCliente = true;
+    String? nomeCliente;
+
+    while (validaCliente) {
+      print('Deseja adicionar um cliente? (s - Sim, n - Não)');
+      String adicionarCliente = stdin.readLineSync()!;
+      if (adicionarCliente == 'n') {
+        nomeCliente = 'Não informado';
+        validaCliente = false;
+        break;
+      } else {
+        cadastroCliente.imprimirClientes();
+        print('Digite o nome do cliente:');
+        nomeCliente = stdin.readLineSync();
+        var cliente = cadastroCliente.buscar(nomeCliente!);
+        if (cliente != null) {
+          print('Cliente encontrado: $cliente');
+          validaCliente = false;
+          break;
+        } else {
+          print('Cliente não encontrado');
+        }
+      }
+    }
+
     while (continuar == 's') {
+      cadastroProduto.imprimir();
       print('Digite o nome do produto:');
       String? nomeProduto = stdin.readLineSync();
       var produto = cadastroProduto.buscar(nomeProduto!);
@@ -69,7 +86,8 @@ class RealizaVenda {
         double? qtdeVendida = double.parse(stdin.readLineSync()!);
         valida = validaQuantidade(nomeProduto, qtdeVendida);
         if (valida) {
-          produtosVenda.add(Produto(produto.id, produto.descricao, qtdeVendida, produto.preco));
+          produtosVenda.add(Produto(
+              produto.id, produto.descricao, qtdeVendida, produto.preco));
         }
       } else {
         print('Produto não encontrado');
@@ -80,14 +98,15 @@ class RealizaVenda {
         break;
       }
     }
-    if(valida){
+    if (valida) {
       print("Valor do desconto:");
       double? desconto = double.parse(stdin.readLineSync()!);
       for (var produto in produtosVenda) {
         valorFinal += produto.preco * produto.qtde;
       }
       valorFinal -= desconto;
-      _vendas.add(Venda(_vendas.length + 1,List.from(produtosVenda), valorFinal, desconto));
+      _vendas.add(Venda(_vendas.length + 1, List.from(produtosVenda),
+          valorFinal, desconto, nomeCliente!));
     }
     produtosVenda.clear();
   }

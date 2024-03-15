@@ -3,6 +3,7 @@ class Produto {
   String descricao;
   double qtde;
   double preco;
+  bool deleted = false;
 
   Produto(this.id, this.descricao, this.qtde, this.preco);
 
@@ -10,7 +11,7 @@ class Produto {
     qtde = novaQtde;
   }
 
-   void alterarPreco(double novaPreco) {
+  void alterarPreco(double novaPreco) {
     preco = novaPreco;
   }
 
@@ -32,24 +33,38 @@ class CadastroProdutos {
   Produto? buscar(String descricao) {
     for (var produto in _produto) {
       if (produto.descricao == descricao) {
-        return produto;
+        if (produto.deleted == true) {
+          print('Produto deletado');
+        } else {
+          return produto;
+        }
       }
     }
     return null;
   }
 
   void deletar(int id) {
-    _produto.removeWhere((cliente) => cliente.id == id);
+    if (_produto.isEmpty) {
+      print('Não há produtos cadastrados');
+    }
+    if (_produto.length < id) {
+      print('Produto não encontrado');
+    } else {
+      var produto = _produto.firstWhere((p) => p.id == id);
+        produto.deleted = true;
+    }
+    //_produto.removeWhere((cliente) => cliente.id == id);
   }
 
   void imprimir() {
-    if (_produto.isEmpty){
-        print('Não há produtos cadastrados');
-    }
-    else{for (var produto in _produto) {
-      print(produto);
+    if (_produto.isEmpty) {
+      print('Não há produtos cadastrados');
+    } else {
+      for (var produto in _produto) {
+        if (produto.deleted == false) {
+          print(produto);
+        }
       }
     }
   }
 }
-

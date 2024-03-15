@@ -11,8 +11,10 @@ class Relatorio{
     print('-------------------Ordem Alfabética-------------------');
     print('------------------------------------------------------');
     for (var cliente in cadastroCliente.clientes) {
-      print('Código: ${cliente.id} - Nome: ${cliente.nome}');
-      print('______________________________________________________');
+      if (cliente.deleted == false){
+        print('Código: ${cliente.id} - Nome: ${cliente.nome}');
+        print('______________________________________________________');
+      }
     }
     print('------------------------------------------------------');
     print('--------------------------------Data atual: ${DateFormat('dd/MM/yyyy').format(DateTime.now())}');
@@ -24,6 +26,7 @@ class Relatorio{
     for (var venda in realizaVenda.vendas) {
       print('------------------------------------------------------');
       print('Código: ${venda.id} - Valor: ${venda.valorTotal} - Desconto: ${venda.desconto}');
+      print('Cliente: ${venda.nomeCliente}');
       print('_________________Produtos Vendidos__________________');
       for (var produto in venda.produtosVendidos) {
         print('Produto: ${produto.descricao} - Quantidade: ${produto.qtde}\nPreço: ${produto.preco} - Total: ${produto.qtde * produto.preco}');

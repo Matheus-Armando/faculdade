@@ -8,11 +8,11 @@ void main() {
   var cadastroCliente = CadastroClientes();
   var cadastroProduto = CadastroProdutos();
   var movimentacaoEstoque = Estoque(cadastroProduto);
-  var movimentacaoVenda = RealizaVenda(cadastroProduto);
+  var movimentacaoVenda = RealizaVenda(cadastroProduto, cadastroCliente);
   var relatorio = Relatorio();
   
 
-  cadastroCliente.inserir(Cliente(1, 'João', 'joao@gmail.com'));
+  cadastroCliente.inserir(Cliente(1, 'Matheus', 'matheus@gmail.com'));
   cadastroCliente.inserir(Cliente(2, 'Maria', 'maria@gmail.com'));
   cadastroCliente.inserir(Cliente(3, 'Carlos', 'carlos@gmail.com'));
   print('------------------------------------------------------');
@@ -54,10 +54,10 @@ void main() {
   cadastroProduto.imprimir();
 
   print('------------------------------------------------------');
-  print('----------------Movimentação de Estoque---------------');
+  print('-----------------Alteração do Estoque-----------------');
   print('------------------------------------------------------');
   movimentacaoEstoque.alteraEstoque('Pomada', 15);
-  movimentacaoEstoque.alteraEstoque('Shampoo', 10);
+  movimentacaoEstoque.alteraEstoque('Shampoo', 100);
   movimentacaoEstoque.alteraPreco('Gel Fixador', 5.4);
   print('------------------------------------------------------');
   print('Produtos após movimentação:');

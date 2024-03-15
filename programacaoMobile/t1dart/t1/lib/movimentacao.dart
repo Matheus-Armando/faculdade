@@ -24,8 +24,10 @@ class Estoque {
     var produto = cadastroProduto.buscar(nomeProduto);
     if (produto != null) {
       print('Produto encontrado: $produto');
-      produto.alterarQuantidade(novaQtde); // Altera a quantidade do produto
-      _movimentacaoEstoque.add(MovimentacaoEstoque(_movimentacaoEstoque.length + 1, nomeProduto, produto.qtde, novaQtde));
+      if(produto.deleted == false){
+        produto.alterarQuantidade(novaQtde); 
+        _movimentacaoEstoque.add(MovimentacaoEstoque(_movimentacaoEstoque.length + 1, nomeProduto, produto.qtde, novaQtde));
+      }
     } else {
       print('Produto não encontrado');
     }
@@ -34,7 +36,10 @@ class Estoque {
     var produto = cadastroProduto.buscar(nomeProduto);
     if (produto != null) {
       print('Produto encontrado: $produto');
-      produto.alterarPreco(novoPreco); // Altera o preço do produto
+      if(produto.deleted == false){
+         produto.alterarPreco(novoPreco);
+        //_movimentacaoEstoque.add(MovimentacaoEstoque(_movimentacaoEstoque.length + 1, nomeProduto, produto.preco, novoPreco));
+      }
     } else {
       print('Produto não encontrado');
     }

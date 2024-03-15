@@ -8,18 +8,19 @@ void main() {
   var cadastroCliente = CadastroClientes();
   var cadastroProduto = CadastroProdutos();
   var movimentacaoEstoque = Estoque(cadastroProduto);
-  var movimentacaoVenda = RealizaVenda(cadastroProduto);
+  var movimentacaoVenda = RealizaVenda(cadastroProduto, cadastroCliente);
   var relatorio = Relatorio();
   bool continuar = true;
 
-  cadastroCliente.inserir(Cliente(1, 'João', 'joao@gmail.com'));
+  cadastroCliente.inserir(Cliente(1, 'Matheus', 'matheus@gmail.com'));
   cadastroCliente.inserir(Cliente(2, 'Maria', 'maria@gmail.com'));
   cadastroCliente.inserir(Cliente(3, 'Carlos', 'carlos@gmail.com'));
-  cadastroProduto.inserir(Produto(1, 'Pomada', 10, 5.0));
-  cadastroProduto.inserir(Produto(2, 'Shampoo', 5, 7.0));
-  cadastroProduto.inserir(Produto(3, 'Gel Fixador', 7, 4.0));
+  cadastroProduto.inserir(Produto(1, 'Pomada', 100, 5.0));
+  cadastroProduto.inserir(Produto(2, 'Shampoo', 50, 7.0));
+  cadastroProduto.inserir(Produto(3, 'Gel Fixador', 70, 4.0));
 
   while(continuar == true){
+    print(' ');
     print('------------------------------------------------------');
     print('Digite 1 para cadastrar cliente');
     print('Digite 2 para buscar cliente');
@@ -100,7 +101,6 @@ void main() {
         movimentacaoEstoque.alteraEstoque(descricao, qtde);
         break;
       case 10:
-        cadastroProduto.imprimir();
         movimentacaoVenda.realizaVenda();
         break;
       case 11:
@@ -113,8 +113,6 @@ void main() {
         continuar = false;
         print('Saindo...');
         break;
-      case 14:
-        movimentacaoVenda.imprimir();
     }
   }
 }

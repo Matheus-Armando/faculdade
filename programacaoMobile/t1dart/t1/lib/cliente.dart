@@ -2,6 +2,7 @@ class Cliente {
   int id;
   String nome;
   String email;
+  bool deleted = false;
 
   Cliente(this.id, this.nome, this.email);
 
@@ -23,24 +24,38 @@ class CadastroClientes {
   Cliente? buscar(String nome) {
     for (var cliente in _clientes) {
       if (cliente.nome == nome) {
-        return cliente;
+        if (cliente.deleted == true) {
+          print('Cliente deletado');
+        } else {
+          return cliente;
+        }
       }
     }
     return null;
   }
 
   void deletar(int id) {
-    _clientes.removeWhere((cliente) => cliente.id == id);
+    if (_clientes.isEmpty) {
+      print('Não há clientes cadastrados');
+    }
+    if (_clientes.length < id) {
+      print('Cliente não encontrado');
+    } else {
+      var cliente = _clientes.firstWhere((c) => c.id == id);
+        cliente.deleted = true;
+    }
+    //_clientes.removeWhere((cliente) => cliente.id == id);
   }
 
   void imprimirClientes() {
-    if (_clientes.isEmpty){
+    if (_clientes.isEmpty) {
       print('Não há clientes cadastrados');
-    }else{
+    } else {
       for (var cliente in _clientes) {
-        print(cliente);
+        if (cliente.deleted == false) {
+          print(cliente);
+        }
       }
     }
   }
 }
-
