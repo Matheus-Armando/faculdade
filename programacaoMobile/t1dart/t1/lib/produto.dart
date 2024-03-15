@@ -43,8 +43,12 @@ class CadastroProdutos {
   }
 
   void imprimir() {
-    for (var produto in _produto) {
+    if (_produto.isEmpty){
+        print('Não há produtos cadastrados');
+    }
+    else{for (var produto in _produto) {
       print(produto);
+      }
     }
   }
 }

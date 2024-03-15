@@ -34,8 +34,12 @@ class CadastroClientes {
   }
 
   void imprimirClientes() {
-    for (var cliente in _clientes) {
-      print(cliente);
+    if (_clientes.isEmpty){
+      print('Não há clientes cadastrados');
+    }else{
+      for (var cliente in _clientes) {
+        print(cliente);
+      }
     }
   }
 }

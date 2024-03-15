@@ -15,24 +15,22 @@ class Relatorio{
       print('......................................................');
     }
     print('------------------------------------------------------');
-    print('-------------------------Data atual: ${DateFormat('dd/MM/yyyy').format(DateTime.now())}}');
+    print('--------------------------------Data atual: ${DateFormat('dd/MM/yyyy').format(DateTime.now())}');
   }
 
   void relatorioVenda(RealizaVenda realizaVenda){
     print('------------------------------------------------------');
-    print('----------------Relatório de Clientes-----------------');
-    print('------------------------------------------------------');
-    print('------------------Ordenado por nome-------------------');
+    print('-----------------Relatório de Vendas------------------');
     print('------------------------------------------------------');
     for (var venda in realizaVenda.vendas) {
-      print('Código: ${venda.id} - Valor: ${venda.valorTotal} Desconto: ${venda.desconto}');
-      print('......................................................');
+      print('Código: ${venda.id} - Valor: ${venda.valorTotal} - Desconto: ${venda.desconto}');
+      print('..................Produtos Vendidos...................');
       for (var produto in venda.produtosVendidos) {
-        print('Produto: ${produto.descricao} - Quantidade: ${produto.qtde}');
+        print('Produto: ${produto.descricao} - Quantidade: ${produto.qtde}\n8 Valor: ${produto.preco}');
         print('......................................................');
       }
     }
     print('------------------------------------------------------');
-    print('-------------------------Data atual: ${DateFormat('dd/MM/yyyy').format(DateTime.now())}}');
+    print('--------------------------------Data atual: ${DateFormat('dd/MM/yyyy').format(DateTime.now())}');
   }
 }

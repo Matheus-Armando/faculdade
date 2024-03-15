@@ -75,6 +75,6 @@ void main() {
   print('------------------------------------------------------');
   relatorio.relatorioCliente(cadastroCliente);
 
-  print('');
+  print(' ');
   relatorio.relatorioVenda(movimentacaoVenda);
 }
