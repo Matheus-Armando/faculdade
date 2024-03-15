@@ -46,6 +46,7 @@ class RealizaVenda {
         return true;
       } else {
         print('Quantidade insuficiente');
+        return false;
       }
     } else {
       return false;
@@ -67,9 +68,6 @@ class RealizaVenda {
         if (valida) {
           produtosVendidos.add(Produto(produto.id, produto.descricao, qtdeVendida, produto.preco));
         }
-        else {
-          print('Quantidade insuficiente');
-      }
       } else {
         print('Produto não encontrado');
       }

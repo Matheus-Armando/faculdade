@@ -8,7 +8,7 @@ class Relatorio{
     print('------------------------------------------------------');
     print('----------------Relatório de Clientes-----------------');
     print('------------------------------------------------------');
-    print('------------------Ordenado por nome-------------------');
+    print('-------------------Ordem Alfabética-------------------');
     print('------------------------------------------------------');
     for (var cliente in cadastroCliente.clientes) {
       print('Código: ${cliente.id} - Nome: ${cliente.nome}');
@@ -26,7 +26,7 @@ class Relatorio{
       print('Código: ${venda.id} - Valor: ${venda.valorTotal} - Desconto: ${venda.desconto}');
       print('..................Produtos Vendidos...................');
       for (var produto in venda.produtosVendidos) {
-        print('Produto: ${produto.descricao} - Quantidade: ${produto.qtde}\n8 Valor: ${produto.preco}');
+        print('Produto: ${produto.descricao} - Quantidade: ${produto.qtde}\nPreço: ${produto.preco} - Total: ${produto.qtde * produto.preco}');
         print('......................................................');
       }
     }
