@@ -12,7 +12,7 @@ class Relatorio{
     print('------------------------------------------------------');
     for (var cliente in cadastroCliente.clientes) {
       print('Código: ${cliente.id} - Nome: ${cliente.nome}');
-      print('......................................................');
+      print('______________________________________________________');
     }
     print('------------------------------------------------------');
     print('--------------------------------Data atual: ${DateFormat('dd/MM/yyyy').format(DateTime.now())}');
@@ -21,13 +21,13 @@ class Relatorio{
   void relatorioVenda(RealizaVenda realizaVenda){
     print('------------------------------------------------------');
     print('-----------------Relatório de Vendas------------------');
-    print('------------------------------------------------------');
     for (var venda in realizaVenda.vendas) {
+      print('------------------------------------------------------');
       print('Código: ${venda.id} - Valor: ${venda.valorTotal} - Desconto: ${venda.desconto}');
-      print('..................Produtos Vendidos...................');
+      print('_________________Produtos Vendidos__________________');
       for (var produto in venda.produtosVendidos) {
         print('Produto: ${produto.descricao} - Quantidade: ${produto.qtde}\nPreço: ${produto.preco} - Total: ${produto.qtde * produto.preco}');
-        print('......................................................');
+        print('______________________________________________________');
       }
     }
     print('------------------------------------------------------');

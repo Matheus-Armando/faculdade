@@ -21,8 +21,9 @@ class RealizaVenda {
   CadastroProdutos cadastroProduto;
 
   RealizaVenda(this.cadastroProduto);
+
   final List<Venda> _vendas = [];
-  List<Produto> produtosVendidos = [];
+
   List<Venda> get vendas => _vendas;
 
   // void venderProduto(String nomeProduto, double qtdeVendida) {
@@ -56,6 +57,8 @@ class RealizaVenda {
   void realizaVenda() {
     String continuar = 's';
     double valorFinal = 0;
+      List<Produto> produtosVenda = [];
+    var valida = true;
     while (continuar == 's') {
       print('Digite o nome do produto:');
       String? nomeProduto = stdin.readLineSync();
@@ -64,9 +67,9 @@ class RealizaVenda {
         print('Produto encontrado: $produto');
         print('Digite a quantidade vendida:');
         double? qtdeVendida = double.parse(stdin.readLineSync()!);
-        var valida = validaQuantidade(nomeProduto, qtdeVendida);
+        valida = validaQuantidade(nomeProduto, qtdeVendida);
         if (valida) {
-          produtosVendidos.add(Produto(produto.id, produto.descricao, qtdeVendida, produto.preco));
+          produtosVenda.add(Produto(produto.id, produto.descricao, qtdeVendida, produto.preco));
         }
       } else {
         print('Produto não encontrado');
@@ -77,13 +80,16 @@ class RealizaVenda {
         break;
       }
     }
-    print("Valor do desconto:");
-    double? desconto = double.parse(stdin.readLineSync()!);
-    for (var produto in produtosVendidos) {
-      valorFinal += produto.preco * produto.qtde;
+    if(valida){
+      print("Valor do desconto:");
+      double? desconto = double.parse(stdin.readLineSync()!);
+      for (var produto in produtosVenda) {
+        valorFinal += produto.preco * produto.qtde;
+      }
+      valorFinal -= desconto;
+      _vendas.add(Venda(_vendas.length + 1,List.from(produtosVenda), valorFinal, desconto));
     }
-    valorFinal -= desconto;
-    _vendas.add(Venda(_vendas.length + 1,produtosVendidos, valorFinal, desconto));
+    produtosVenda.clear();
   }
 
   void imprimir() {

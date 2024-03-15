@@ -113,6 +113,8 @@ void main() {
         continuar = false;
         print('Saindo...');
         break;
+      case 14:
+        movimentacaoVenda.imprimir();
     }
   }
 }
