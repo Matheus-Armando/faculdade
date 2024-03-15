@@ -14,6 +14,8 @@ class Cliente {
 class CadastroClientes {
   final List<Cliente> _clientes = [];
 
+  List<Cliente> get clientes => _clientes;
+
   void inserir(Cliente cliente) {
     _clientes.add(cliente);
   }
