@@ -1,0 +1,9 @@
+Erro na request para o CEP: 13465000. Erro: AxiosError: Request failed with status code 404Erro na request para o CEP: 1111. Erro: AxiosError: Request failed with status code 400Erro na request para o CEP: 13465000. Erro: AxiosError: Request failed with status code 404Erro na request para o CEP: 1111. Erro: AggregateError
+Erro na request para o CEP: 13465000. Erro: AxiosError: Request failed with status code 404
+
+Wed Mar 27 2024 09:47:26 GMT-0300 (Horário Padrão de Brasília) Erro na request para o CEP: 1111. Erro: AxiosError: Request failed with status code 400
+Wed Mar 27 2024 09:47:26 GMT-0300 (Horário Padrão de Brasília) Erro na request para o CEP: 13465000. Erro: AxiosError: Request failed with status code 404
+27/03/2024, 09:48:36 Erro na request para o CEP: 1111. Erro: AxiosError: Request failed with status code 400
+27/03/2024, 09:48:37 Erro na request para o CEP: 13465000. Erro: AxiosError: Request failed with status code 404
+27/03/2024, 10:02:01 || Erro na request para o CEP: 1111. Erro: AxiosError: Request failed with status code 400
+27/03/2024, 10:02:03 || Erro na request para o CEP: 13465000. Erro: AxiosError: Request failed with status code 404
